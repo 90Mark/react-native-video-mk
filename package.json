@@ -1,0 +1,70 @@
+{
+  "name": "react-native-video-mk",
+  "version": "1.0.6",
+  "description": "视频播放",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/90Mark/react-native-video-mk.git"
+  },
+  "keywords": [
+    "react-native",
+    "orientation",
+    "ios",
+    "android",
+    "rn"
+  ],
+  "author": "90Mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/90Mark/react-native-video-mk/issues"
+  },
+  "homepage": "https://github.com/90Mark/react-native-video-mk#readme",
+  "devDependencies": {
+    "@react-native-community/eslint-config": "0.0.7",
+    "babel-eslint": "10.0.3",
+    "eslint": "6.8.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-hot-loader": "^4.12.19",
+    "react-native": "^0.61.5"
+  },
+  "dependencies": {
+    "keymirror": "^0.1.1",
+    "prop-types": "^15.7.2",
+    "shaka-player": "^2.5.9",
+    "react-native-orientation-mk": "^1.0.3"
+  },
+  "contributors": [
+    {
+        "name": "Isaiah Grey",
+        "email": "isaiahgrey@gmail.com"
+    },
+    {
+        "name": "Johannes Lumpe",
+        "email": "johannes@lum.pe"
+    },
+    {
+        "name": "Baris Sencan",
+        "email": "baris.sncn@gmail.com"
+    },
+    {
+        "name": "Hampton Maxwell",
+        "email": "me@hamptonmaxwell.com"
+    }
+  ],
+  "files": [
+    "android-exoplayer",
+    "android",
+    "dom",
+    "ios",
+    "windows",
+    "FilterType.js",
+    "TextTrackType.js",
+    "VideoResizeMode.js",
+    "react-native-video-mk.podspec"
+  ]
+}
