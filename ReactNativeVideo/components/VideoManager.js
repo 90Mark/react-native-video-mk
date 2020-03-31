@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react'
 
-import Video from 'react-native-video'
+import Video from '../../Video'
 
 export default class videoManager extends Component {
   constructor (props) {

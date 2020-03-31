@@ -8,5 +8,6 @@ export default {
   full: require('./images/full.png'),
   exit: require('./images/exit.png'),
   left: require('./images/left.png'),
-  right: require('./images/right.png')
+  right: require('./images/right.png'),
+  close: require('./images/close.png')
 }

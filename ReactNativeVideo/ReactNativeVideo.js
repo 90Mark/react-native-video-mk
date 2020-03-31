@@ -125,6 +125,7 @@ export default class ReactNativeVideo extends Component {
         <ControlBar
           controlBarShow={controlBarShow}
           start={true}
+          videoArray={videoArray}
           isFull={isFull}
           paused={paused}
           title={title}
@@ -149,7 +150,7 @@ export default class ReactNativeVideo extends Component {
           <Image
             resizeMode={'contain'}
             style={styles.img}
-            source={Images.left}
+            source={Images.close}
           />
         </TouchableHighlight>
       </View>
@@ -284,8 +285,8 @@ const styles = StyleSheet.create({
     height: 33
   },
   img: {
-    width: 33,
-    height: 33
+    width: 30,
+    height: 30
   },
   backgroundVideo: {
     position: 'absolute',

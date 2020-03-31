@@ -23,7 +23,7 @@ export default class ControlBar extends Component {
   }
 
   render () {
-    let { title, isFull, controlBarShow, paused, startClick, fullClick, videoProgress, previousClick, nextClick, setProgress, progressBeginClick, progressEnd } = this.props
+    let { videoArray, title, isFull, controlBarShow, paused, startClick, fullClick, videoProgress, previousClick, nextClick, setProgress, progressBeginClick, progressEnd } = this.props
     const { width } = Dimensions.get('window')
     return controlBarShow && (
       <View
@@ -35,7 +35,7 @@ export default class ControlBar extends Component {
             onPress={fullClick}>
             <Image
               resizeMode={'contain'}
-              style={styles.image}
+              style={styles.sImage}
               source={Images.left} />
           </TouchableWithoutFeedback>
           <View
@@ -58,25 +58,25 @@ export default class ControlBar extends Component {
                 source={Images.start} />
             </TouchableWithoutFeedback>
           </View>
-          : isFull ? <View
-            style={styles.checkView}>
-            <TouchableWithoutFeedback
-              style={styles.btn}
-              onPress={previousClick}>
-              <Image
-                resizeMode={'contain'}
-                style={styles.image}
-                source={Images.left} />
-            </TouchableWithoutFeedback>
-            <TouchableWithoutFeedback
-              style={styles.btn}
-              onPress={nextClick}>
-              <Image
-                resizeMode={'contain'}
-                style={styles.image}
-                source={Images.right} />
-            </TouchableWithoutFeedback>
-          </View> : <View style={{ flex: 1 }} />
+          : isFull && videoArray ?
+            <View style={styles.checkView}>
+              <TouchableWithoutFeedback
+                style={styles.btn}
+                onPress={previousClick}>
+                <Image
+                  resizeMode={'contain'}
+                  style={styles.sImage}
+                  source={Images.left} />
+              </TouchableWithoutFeedback>
+              <TouchableWithoutFeedback
+                style={styles.btn}
+                onPress={nextClick}>
+                <Image
+                  resizeMode={'contain'}
+                  style={styles.sImage}
+                  source={Images.right} />
+              </TouchableWithoutFeedback>
+            </View> : <View style={{ flex: 1 }} />
         }
         <View style={{
           width: '100%',

@@ -1,6 +1,6 @@
 {
   "name": "react-native-video-mk",
-  "version": "1.0.6",
+  "version": "1.0.13",
   "description": "视频播放",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "react-native",
-    "orientation",
+    "video",
     "ios",
     "android",
     "rn"
@@ -65,6 +65,8 @@
     "FilterType.js",
     "TextTrackType.js",
     "VideoResizeMode.js",
+    "Video.js",
+    "ReactNativeVideo",
     "react-native-video-mk.podspec"
   ]
 }

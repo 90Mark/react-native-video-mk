@@ -3,13 +3,13 @@ require "json"
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
-  s.name           = 'react-native-video-mk'
+  s.name           = package['name']
   s.version        = package['version']
   s.summary        = package['description']
   s.description    = package['description']
   s.license        = package['license']
   s.author         = package['author']
-  s.homepage       = 'https://github.com/90Mark/react-native-video-mk'
+  s.homepage       = package['homepage']
   s.source       = { :git => "https://github.com/90Mark/react-native-video-mk.git", :tag => "#{s.version}" }
 
   s.ios.deployment_target = "8.0"
