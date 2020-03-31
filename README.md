@@ -14,6 +14,7 @@ js 中
 
 import { MkVideo,Video } from 'react-native-video-mk'
 
+
 <MkVideo
           currentIndex={0}
           videoData={{
@@ -22,11 +23,11 @@ import { MkVideo,Video } from 'react-native-video-mk'
           }}
           // videoArray={[
           //   {
-          //     title: '我是第三个视频',
+          //     title: '我是第一个视频',
           //     url: { uri: vurl }
           //   },
           //   {
-          //     title: '我是第si个视频',
+          //     title: '我是第二个视频',
           //     url: { uri: vurl }
           //   }
           // ]}
@@ -39,3 +40,5 @@ Video具体使用参考 react-native-video npm官方解释
 
 
 MkVideo  提供一个页面，直接push进去就好，支持多个视频切换
+
+
