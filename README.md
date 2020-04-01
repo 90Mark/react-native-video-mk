@@ -2,6 +2,26 @@
 
 兼容了安卓 AndroidX 新版的问题
 
+
+效果
+
+单个视频时
+
+![Image text](https://github.com/90Mark/react-native-video-mk/blob/master/readmeRes/1.png)
+
+
+![Image text](https://github.com/90Mark/react-native-video-mk/blob/master/readmeRes/2.png)
+
+多个视频时
+
+
+![Image text](https://github.com/90Mark/react-native-video-mk/blob/master/readmeRes/3.png)
+
+
+![Image text](https://github.com/90Mark/react-native-video-mk/blob/master/readmeRes/4.png)
+
+
+
 ---
 使用方法：
 
@@ -23,24 +43,34 @@ js 中
 
     import { MkVideo,Video } from 'react-native-video-mk'
 
-    <MkVideo
-          currentIndex={0}
-          videoData={{
+
+    单个视频
+     <MkVideo
+        videoData={{
+          title: '我是标题',
+          url: { uri: vurl }
+        }}
+        onBack={this._back}
+      />
+
+
+    多个视频
+
+      <MkVideo
+        currentIndex={0}
+        videoArray={[
+          {
             title: '我是第一个视频',
             url: { uri: vurl }
-          }}
-          // videoArray={[
-          //   {
-          //     title: '我是第一个视频',
-          //     url: { uri: vurl }
-          //   },
-          //   {
-          //     title: '我是第二个视频',
-          //     url: { uri: vurl }
-          //   }
-          // ]}
-          onBack={this._back}
-        />
+          },
+          {
+            title: '我是第二个视频',
+            url: { uri: vurl }
+          }
+        ]}
+        onBack={this._back}
+      />
+
 
      _back = () => {
       const { navigation } = this.props

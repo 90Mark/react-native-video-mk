@@ -67,6 +67,7 @@
     "VideoResizeMode.js",
     "Video.js",
     "ReactNativeVideo",
-    "react-native-video-mk.podspec"
+    "react-native-video-mk.podspec",
+    "readmeRes"
   ]
 }
