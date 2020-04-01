@@ -3,12 +3,18 @@
 兼容了安卓 AndroidX 新版的问题
 
 ---
-使用方法
+使用方法：
+
+安装
 
     npm install react-native-video-mk --save
     react-native link react-native-video-mk
     
     ios需要 pod install
+
+导入
+
+    import { MkVideo,Video } from 'react-native-video-mk'
 
 
 
