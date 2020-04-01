@@ -1,6 +1,6 @@
 {
   "name": "react-native-video-mk",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "视频播放",
   "main": "index.js",
   "scripts": {

@@ -13,7 +13,8 @@ import {
   Text,
   Platform,
   StatusBar,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  BackHandler
 } from 'react-native'
 import Orientation from 'react-native-orientation-mk'
 
@@ -48,6 +49,7 @@ export default class ReactNativeVideo extends Component {
 
   componentDidMount () {
     // Platform.OS === 'ios' && Orientation.unlockAllOrientations()
+    BackHandler.addEventListener('hardwareBackPress', this._onBackAndroid)
     this.timeOut = setTimeout(() => {
       this.setState({
         showVideo: true,
@@ -66,6 +68,7 @@ export default class ReactNativeVideo extends Component {
   }
 
   componentWillUnmount () {
+    BackHandler.removeEventListener('hardwareBackPress', this._onBackAndroid)
     Platform.OS === 'ios' && Orientation.lockToPortrait()
     Orientation.removeOrientationListener(this._changeOrientation)
   }
@@ -267,6 +270,16 @@ export default class ReactNativeVideo extends Component {
       StatusBar.setHidden(true)
     }
   }
+
+  _onBackAndroid = () => {
+    const { isFull } = this.state
+    if (isFull) {
+      this._fullClick()
+    } else {
+      this._back()
+    }
+    return true
+  }
 }
 
 const styles = StyleSheet.create({
@@ -296,7 +309,7 @@ const styles = StyleSheet.create({
     right: 0
   },
   text: {
-    fontSize: 18,
+    fontSize: 14,
     color: '#fff'
   },
   widthFull: {

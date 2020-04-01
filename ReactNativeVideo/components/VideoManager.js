@@ -30,7 +30,7 @@ export default class videoManager extends Component {
         onEnd={this._onEnd}                      // 播放完成后的回调
         onError={onError && onError}               // 播放失败后的回调
         onProgress={this._onProgress} // 进度
-        onLoad={onLoad}
+        onLoad={onLoad && onLoad}
         progressUpdateInterval={500} // 进度回调间隔
         allowsExternalPlayback={false}
       />
