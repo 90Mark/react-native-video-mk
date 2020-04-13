@@ -1,3 +1,7 @@
+github  https://github.com/90Mark/react-native-video-mk
+
+本文档，适用于ReactNative 项目
+
 基于 react-native-video @4.4.5 修改和新增
 
 兼容了安卓 AndroidX 新版的问题
